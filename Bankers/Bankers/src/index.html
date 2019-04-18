@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Algo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  		 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <h3 class="text-white text-center">Banker's Algorithm</h3>
+        </nav>
+      <br><br><br>
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" >
+<!-- 			<h1 class="text-center text-muted"><B>Banker's Algorithm</B></h1>
+ -->			 <hr class="my-4">
+		</div>
+	</div>
+	 <div class="container">
+                <div class="jumbotron">
+	<div class="row">
+		<div class="col-md-12">
+			<p class="text-justify text-muted">
+        <h5><B>Banker's algorithm</B></h5> <img alt="Bootstrap Image Preview" src="images/Bankers.png" width="350" align="right" hspace="10"><br><br><br><img alt="Bootstrap Image Preview" src="images/Allocation.png" width="250" height="250" align="left" hspace="10">
+				Banker's Algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation of predetermined maximum possible amounts of all resources, and then makes an "safe-state" check to test for possible deadlock conditions for all other pending activities, before deciding whether allocation should be allowed to continue.<br>The algorithm was developed in the design process for the the operating system. When a new process enters a system, it must declare the maximum number of instances of each resource type that it may ever claim; clearly, that number may not exceed the total number of resources in the system. Also, when a process gets all its requested resources it must return them in a finite amount of time.<br><img alt="Bootstrap Image Preview" src="images/Cars.jpg" align="right" width="350" height="150" hspace="10">Resources may be allocated to a process only if the amount of resources requested is less than or equal to the amount available; otherwise, the process waits until resources are available. The Banker's Algorithm derives its name from the fact that this algorithm could be used in a banking system to ensure that the bank does not run out of resources, because the bank would never allocate its money in such a way that it can no longer satisfy the needs of all its customers. By using the Banker's algorithm, the bank ensures that when customers request money the bank never leaves a safe state. If the customer's request does not cause the bank to leave a safe state, the cash will be allocated, otherwise the customer must wait until some other customer deposits enough
+       <br><br>
+        <B>Resources</B><br>
+        For the Banker's algorithm to work, it needs to know three things:<br>- How much of each resource each process could possibly request[MAX]<br>- How much of each resource each process is currently holding[ALLOCATED]<br>- How much of each resource the system currently has available[AVAILABLE]
+        <br><br>
+       <B>Safe and Unsafe States</B><br><br>
+        <img alt="Bootstrap Image Preview" src="images/deadlock.png" width="150" height="150" align="left" hspace="10">
+        A state is considered safe if it is possible for all processes to finish executing (terminate). Since the system cannot know when a process will terminate, or how many resources it will have requested by then, the system assumes that all processes will eventually attempt to acquire their stated maximum resources and terminate soon afterward. This is a reasonable assumption in most cases since the system is not particularly concerned with how long each process runs (at least not from a deadlock avoidance perspective). Also, if a process terminates without acquiring its maximum resource it only makes it easier on the system. A safe state is considered to be the decision maker if it's going to process ready queue.
+
+Given that assumption, the algorithm determines if a state is safe by trying to find a hypothetical set of requests by the processes that would allow each to acquire its maximum resources and then terminate (returning its resources to the system). Any state where no such set exists is an unsafe state. 
+			</p>
+		</div>
+	
+	</div>
+	<br><br><br><br>
+	<!-- <div class="row">
+		<div class="col-md-12">
+			<p class="text-justify text-muted">
+				
+				
+			</p>
+		</div>
+	</div> -->
+</div></div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
